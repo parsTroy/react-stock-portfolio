@@ -1,0 +1,15 @@
+.container {
+    margin-top: 40px;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.logo {
+    width: 100px;
+}
+
+.legal {
+    width: 800px;
+}

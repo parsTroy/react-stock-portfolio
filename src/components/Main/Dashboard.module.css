@@ -1,0 +1,44 @@
+.container {
+    margin: 40px 50px 0 50px;
+    padding: 50px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.infoContainer {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 900px 700px;
+    columns: 2;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: -30px 20px 20px 20px;
+}
+.stockSearch {
+    margin-right: 20px;
+}
+.input {
+    margin-bottom: 10px;
+}
+
+.chart {
+    padding: 15px;
+    text-align: center;
+    box-shadow: 1px 1px 5px var(--bg-color);
+    border-radius: 10px;
+}
+
+.stockData {
+    padding: 15px;
+    text-align: center;
+    box-shadow: 1px 1px 5px var(--bg-color);
+    border-radius: 10px;
+}
+.stockStats {
+    margin: 20px;
+}

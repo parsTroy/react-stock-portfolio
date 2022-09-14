@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.key {
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}
+
+.data {
+    border-bottom: 1.5px solid var(--bg-color);
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}

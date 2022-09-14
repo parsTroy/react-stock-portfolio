@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.chart {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    margin-left: -30px;
+}
