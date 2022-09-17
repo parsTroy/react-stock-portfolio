@@ -19,7 +19,7 @@ const Header = () => {
         <a href="/">
           <button className={styles.navBtn}>Home</button>
         </a>
-        <a href="/diversification">
+        <a href="/portfolio">
           <button className={styles.navBtn}>Portfolio</button>
         </a>
         <a href="/future-value">
