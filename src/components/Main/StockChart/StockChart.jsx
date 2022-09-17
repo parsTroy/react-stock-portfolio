@@ -69,7 +69,7 @@ const StockChart = () => {
         </ul>
       <div className={styles.chart}>
         <BarChart width={800} height={400} data={data}>
-          <XAxis dataKey="name" stroke={"var(--accent-2-color)"} />
+          <XAxis dataKey="name" stroke={"var(--a-color)"} />
           <YAxis />
           <Tooltip wrapperStyle={{ color: 'var(--accent-2-color)', width: 100, backgroundColor: 'var(--bg-color)' }} />
           <Legend width={100} wrapperStyle={{ top: 40, right: 20, backgroundColor: 'var(--bg-color)', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '40px' }} />

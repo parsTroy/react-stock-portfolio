@@ -27,11 +27,11 @@ const Search = () => {
   }
 
   return (
-    <div className={`flex items-center my-4 border-2 rounded-md relative z-50 w-100 bg-gray-900 border-gray-800`}>
+    <div className={`flex items-center my-4 border-2 rounded-md relative z-50 w-100 bg-gray-900 border-[var(--a-color)]`}>
       <input 
         type='text' 
         value={input} 
-        className={`w-full px-4 py-2 focus:outline-none rounded-md bg-gray-900`} 
+        className={`w-full px-4 py-2 focus:outline-none rounded-md bg-gray-1000`} 
         placeholder='Search stock...' 
         onChange={(event) => {setInput(event.target.value)}} 
         onKeyPress={(event) => {

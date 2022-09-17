@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
 import Details from "../Details/Details";
-import styles from './StockData.module.css';
 import StockContext from '../../../context/StockContext'
 import { fetchQuote, fetchStockDetails } from '../../../api/api'
 

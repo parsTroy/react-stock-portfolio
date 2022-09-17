@@ -5,6 +5,7 @@ import StockChart from "./StockChart/StockChart";
 import StockData from "./StockData/StockData";
 import { fetchQuote, fetchStockDetails } from '../../api/api'
 import StockContext from '../../context/StockContext'
+import Overview from "./PriceOverview/Overview";
 
 const Dashboard = () => {
 
@@ -45,6 +46,7 @@ const Dashboard = () => {
       <div className={styles.inputContainer}>
         <h1 className={styles.stockSearch}>Stock Search</h1>
         <Search />
+        <Overview symbol={stockSymbol} price={quote.pc} change={quote.d} changePercent={quote.dp} currency={stockDetails.currency}/>
       </div>
         <div className={styles.infoContainer}>
           <div className={styles.chart}>
