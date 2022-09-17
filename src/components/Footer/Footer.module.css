@@ -1,15 +1,27 @@
 .container {
+    display: grid;
+    grid-template-columns: 25rem 35rem 35rem;
+    grid-template-rows: 1fr 1fr;
     margin-top: 40px;
     background-color: var(--accent-color);
-    display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 .logo {
     width: 100px;
+    margin-left: 8rem;
 }
 
 .legal {
+    position: relative;
     width: 800px;
+    text-align: center;
+    align-content: center;
+    left: 20rem;
+    margin-bottom: 30px;
+}
+
+.links {
+    margin-left: 20px;
 }

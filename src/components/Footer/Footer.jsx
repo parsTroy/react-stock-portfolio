@@ -10,7 +10,7 @@ const Footer = () => {
           <img className={styles.logo} src={Logo} alt="logo" />
         </a>
       </div>
-      <div>
+      <div className={styles.links}>
         <a href="/future-value">
           <p>Future Value Calculator</p>
         </a>
