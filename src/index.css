@@ -6,6 +6,24 @@
     --red-color: #FF6B6C;
     --green-color: #04A777;
 }
+
+@layer components {
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #a5b4fc;
+        width: 5px;
+        border-radius: 10px;
+    }
+    .custom-scrollbar-dark::-webkit-scrollbar-thumb {
+        background-color: #312e81;
+    }
+}
+
 body {
     background-color: var(--bg-color);
     color: #fff;
@@ -45,4 +63,19 @@ input {
     color: #fff;
     padding: 10px;
     border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #a5b4fc;
+    width: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--a-color);
 }

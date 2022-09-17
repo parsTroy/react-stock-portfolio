@@ -1,16 +1,20 @@
-import './App.css';
+import { useState } from 'react';
 import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header';
 import Dashboard from './components/Main/Dashboard';
+import StockContext from './context/StockContext';
 
 
 function App() {
+
+  const [stockSymbol, setStockSymbol] = useState('AAPL');
+
   return (
-    <div className="App">
+    <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
       <Header />
       <Dashboard />
       <Footer />
-    </div>
+    </StockContext.Provider>
   );
 }
 
