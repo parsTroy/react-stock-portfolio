@@ -33,7 +33,7 @@ const StockChart = () => {
           const startTimestampUnix = convertDateToUnixTimestamp(startDate);
           const endTimestampUnix = convertDateToUnixTimestamp(endDate);
 
-          console.log(startTimestampUnix)
+          // console.log(startTimestampUnix)
 
           return {startTimestampUnix, endTimestampUnix};
       };
@@ -55,7 +55,7 @@ const StockChart = () => {
 
   return (
     <div className={styles.container}>
-        <ul className='flex absolute top-2 right-2 z-40'>
+        <ul className='z-40'>
           {Object.keys(chartConfig).map((item) => {
             return (
               <li key={item}>

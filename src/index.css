@@ -1,11 +1,6 @@
-:root {
-    --bg-color: #121212;
-    --accent-color: #1D1D1D;
-    --accent-2-color: #BB86FC;
-    --a-color: #9EEFE5;
-    --red-color: #FF6B6C;
-    --green-color: #04A777;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
     .custom-scrollbar::-webkit-scrollbar {
@@ -24,6 +19,15 @@
     }
 }
 
+:root {
+    --bg-color: #121212;
+    --accent-color: #1D1D1D;
+    --accent-2-color: #BB86FC;
+    --a-color: #9EEFE5;
+    --red-color: #FF6B6C;
+    --green-color: #04A777;
+}
+
 body {
     background-color: var(--bg-color);
     color: #fff;
@@ -32,6 +36,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 button {
+    color: var(--accent-color);
     cursor: pointer;
     transition: 0.15s;
     background-color: var(--a-color);

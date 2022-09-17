@@ -12,7 +12,7 @@ const Header = () => {
       </div>
       <div className={styles.title}>
         <a href="/">
-          <h1>Investation</h1>
+          <h1 className={styles.title}>Investation</h1>
         </a>
       </div>
       <div className={styles.navigation}>

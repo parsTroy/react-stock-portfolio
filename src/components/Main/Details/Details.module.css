@@ -1,0 +1,16 @@
+.data {
+    border-bottom: 1.5px solid var(--bg-color);
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.value {
+    margin-left: 20px;
+}
+
+.key {
+    margin-right: 20px;
+}
