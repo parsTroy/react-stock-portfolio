@@ -8,9 +8,8 @@ const Dashboard = () => {
   return (
     <div className={styles.container}>
       <div className={styles.inputContainer}>
+        <h1 className={styles.stockSearch}>Stock Search</h1>
         <Search />
-        {/* <h1 className={styles.stockSearch}>Stock Search</h1>
-        <input className={styles.input} type="text" placeholder="Search ticker..." /> */}
       </div>
         <div className={styles.infoContainer}>
           <div className={styles.chart}>
