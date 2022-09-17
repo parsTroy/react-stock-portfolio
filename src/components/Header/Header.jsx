@@ -20,7 +20,7 @@ const Header = () => {
           <button className={styles.navBtn}>Home</button>
         </a>
         <a href="/diversification">
-          <button className={styles.navBtn}>Diversification</button>
+          <button className={styles.navBtn}>Portfolio</button>
         </a>
         <a href="/future-value">
           <button className={styles.navBtn}>Future Value</button>
