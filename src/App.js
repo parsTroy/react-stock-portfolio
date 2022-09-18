@@ -6,7 +6,7 @@ import Dashboard from './components/Main/Dashboard';
 import StockContext from './context/StockContext';
 import Portfolio from './components/Portfolio/Portfolio.jsx';
 import FutureValue from './components/FutureValue/FutureValue.jsx';
-import Profile from './components/Profile/Profile.jsx';
+import ProfilePage from './components/Profile/ProfilePage.jsx';
 import About from './components/About/About.jsx';
 import Terms from './components/Terms/Terms.jsx';
 import Privacy from './components/Privacy/Privacy.jsx';
@@ -22,7 +22,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/future-value" element={<FutureValue />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/terms-of-service" element={<Terms />} />
         <Route path="/privacy-policy" element={<Privacy />} />

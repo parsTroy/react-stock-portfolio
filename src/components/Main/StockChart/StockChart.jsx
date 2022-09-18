@@ -55,7 +55,7 @@ const StockChart = () => {
 
   return (
     <div className={styles.container}>
-              <ul className='flex absolute top-80 ml-20 left-1/3 z-40'>
+              <ul className='flex absolute top-80 ml-20 left-1/3'>
             {Object.keys(chartConfig).map((item) => {
                 return (
                     <li key={item}>
