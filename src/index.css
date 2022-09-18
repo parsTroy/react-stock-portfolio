@@ -68,6 +68,7 @@ input {
     color: #fff;
     padding: 10px;
     border-radius: 10px;
+    text-transform: uppercase;
 }
 
 ::-webkit-scrollbar {
@@ -83,4 +84,22 @@ input {
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--a-color);
+}
+input { 
+    text-transform: uppercase;
+}
+::-webkit-input-placeholder {
+    text-transform: none;
+}
+:-moz-placeholder {
+    text-transform: none;
+}
+::-moz-placeholder {
+    text-transform: none;
+}
+:-ms-input-placeholder {
+    text-transform: none;
+}
+::placeholder {
+    text-transform: none;
 }

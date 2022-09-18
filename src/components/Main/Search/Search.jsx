@@ -27,11 +27,11 @@ const Search = () => {
   }
 
   return (
-    <div className={`flex items-center my-4 border-2 rounded-md relative z-50 w-100 bg-gray-900 border-[var(--a-color)]`}>
+    <div className={`flex items-center my-4 border-2 rounded-md relative z-50 w-100 bg-[#44305B] border-[#BB86FC]`}>
       <input 
         type='text' 
         value={input} 
-        className={`w-full px-4 py-2 focus:outline-none rounded-md bg-gray-1000`} 
+        className={`sm:w-full px-4 py-2 focus:outline-none rounded-md bg-gray-1000 lg:w-80`} 
         placeholder='Search stock...' 
         onChange={(event) => {setInput(event.target.value)}} 
         onKeyPress={(event) => {
@@ -47,7 +47,7 @@ const Search = () => {
         </button>
       )}
 
-      <button onClick={updateBestMatches} className='h-8 w-8 bg-[var(--a-color)] rounded-md flex justify-center items-center m-1 p-2 transition duration-300 hover:ring-2 ring-indigo-400'>
+      <button onClick={updateBestMatches} className='h-8 w-8 bg-[var(--a-color)] rounded-md flex justify-center items-center m-1 p-2 transition duration-300 hover:ring-2 ring-[var(--a-color)]'>
         <SearchIcon className='h-4 w-4 fill-gray-100' />
       </button>
       {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} /> : null}
