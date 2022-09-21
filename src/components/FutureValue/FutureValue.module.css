@@ -1,5 +1,5 @@
 .container {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -11,9 +11,37 @@
 
 .title {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
-.subTitle {
-    font-size: 25px;
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.inputContainer {
+    /* border: 1px solid blue; */
+    display: grid;
+    justify-content: right;
+}
+
+.input {
+    margin: 15px 5px 5px 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.button {
+    margin-top: 40px;
+    padding-top: 5px;
+}
+
+.chart {
+    /* border: 1px solid red; */
+    margin-right: 20px;
+}
+
+.total {
+    margin-top: 60px;
+    font-size: 40px;
 }
