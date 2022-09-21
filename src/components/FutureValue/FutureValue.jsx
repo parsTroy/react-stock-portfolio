@@ -8,31 +8,31 @@ const FutureValue = () => {
     const data = [
         {
           name: '2023',
-          uv: 10000,
+          PortfolioValue: 10000,
         },
         {
           name: '2024',
-          uv: 11450,
+          PortfolioValue: 11450,
         },
         {
           name: '2025',
-          uv: 12570,
+          PortfolioValue: 12570,
         },
         {
           name: '2026',
-          uv: 13780,
+          PortfolioValue: 13780,
         },
         {
           name: '2027',
-          uv: 15890,
+          PortfolioValue: 15890,
         },
         {
           name: '2028',
-          uv: 19390,
+          PortfolioValue: 19390,
         },
         {
           name: '2029',
-          uv: 23490,
+          PortfolioValue: 23490,
         },
       ];
     
@@ -64,7 +64,7 @@ const FutureValue = () => {
                         </defs>
                             <Area 
                                 type='monotone' 
-                                dataKey='uv' 
+                                dataKey='PortfolioValue' 
                                 stroke='#312e81' 
                                 fillOpacity={1}
                                 strokeWidth={0.5}
