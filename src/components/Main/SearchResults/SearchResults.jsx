@@ -6,7 +6,7 @@ const SearchResults = ({ results }) => {
   const { setStockSymbol } = useContext(StockContext);
 
   return (
-    <ul className={`absolute top-12 border-2 w-full rounded-md h-64 overflow-y-scroll bg-[#121212] border-[#BB86FC] custom-scrollbar`}>
+    <ul className={`z-10 absolute top-12 border-2 w-full rounded-md h-64 overflow-y-scroll bg-[#121212] border-[#BB86FC] custom-scrollbar`}>
         {results.map((item) => {
             return (
                 <li 

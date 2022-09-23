@@ -42,12 +42,12 @@ const Search = () => {
       />
 
       {input && (
-        <button onClick={clear} className='m-1'>
+        <button onClick={clear} className='m-1 z-10'>
           <XIcon className='h-4 w-4 fill-gray-500' />
         </button>
       )}
 
-      <button onClick={updateBestMatches} className='h-8 w-8 bg-[var(--a-color)] rounded-md flex justify-center items-center m-1 p-2 transition duration-300 hover:ring-2 ring-[var(--a-color)]'>
+      <button onClick={updateBestMatches} className='h-8 w-8 bg-[#9EEFE5] rounded-md flex justify-center items-center m-1 p-2 transition duration-300 hover:ring-2 ring-[#9EEFE5]'>
         <SearchIcon className='h-4 w-4 fill-gray-100' />
       </button>
       {input && bestMatches.length > 0 ? <SearchResults results={bestMatches} /> : null}
