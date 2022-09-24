@@ -4,16 +4,21 @@ import styles from './FutureValue.module.css';
 
 const FutureValue = () => {
 
-  const initialV = document.getElementById('initial').value;
-  const ongoingV = document.getElementById('ongoing').value;
-  const termV = document.getElementById('term').value;
-  const rateV = document.getElementById('rate').value;
+  const initialV = document.getElementById('initial');
+  const ongoingV = document.getElementById('ongoing');
+  const termV = document.getElementById('term');
+  const rateV = document.getElementById('rate');
+
+  const i = initialV.value
+  const o = ongoingV.value
+  const t = termV.value
+  const r = rateV.value
 
   const totalV = document.getElementById('total');
 
   const submitValues = () => {
-    console.log(initialV*((1+rateV)/100));
-    totalV.innerHTML = 'Total Investment Value:' + ' ' + ' ' + '$' + initialV*((1+rateV)/100);
+    console.log((i*((1+r)/100)**t).toFixed(2));
+    // totalV.innerHTML = 'Total Investment Value:' + ' ' + '$' + (initialV*((1+rateV)/100)**termV).toFixed(2);
   }
 
     const data = [
