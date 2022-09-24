@@ -4,6 +4,17 @@ import styles from './FutureValue.module.css';
 
 const FutureValue = () => {
 
+  const initialV = document.getElementById('initial').value;
+  const ongoingV = document.getElementById('ongoing').value;
+  const termV = document.getElementById('term').value;
+  const rateV = document.getElementById('rate').value;
+
+  const totalV = document.getElementById('total');
+
+  const submitValues = () => {
+    console.log(initialV*((1+rateV)/100));
+    totalV.innerHTML = 'Total Investment Value:' + ' ' + ' ' + '$' + initialV*((1+rateV)/100);
+  }
 
     const data = [
         {
@@ -51,7 +62,7 @@ const FutureValue = () => {
                     <label htmlFor="term">Investment Term</label>
                     <input className={styles.input} id="rate" />
                     <label htmlFor="rate">Expected Rate of Return (%)</label>
-                    <button className={styles.button} >Submit</button>
+                    <button className={styles.button} onClick={submitValues} >Submit</button>
                 </div>
                 <div className={styles.chart}>
                     <ResponsiveContainer>
@@ -83,7 +94,7 @@ const FutureValue = () => {
                 </div>
             </div>
                 <div>
-                    <h1 className={styles.total}>Total Investment Value:</h1>
+                    <h1 className={styles.total} id="total">Total Investment Value:</h1>
                 </div>
         </div>
     );
