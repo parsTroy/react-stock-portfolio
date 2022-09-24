@@ -1,25 +1,48 @@
 import React from "react";
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import styles from './FutureValue.module.css';
 
 const FutureValue = () => {
 
-  const initialV = document.getElementById('initial');
-  const ongoingV = document.getElementById('ongoing');
-  const termV = document.getElementById('term');
-  const rateV = document.getElementById('rate');
-
-  const i = initialV.value
-  const o = ongoingV.value
-  const t = termV.value
-  const r = rateV.value
-
-  const totalV = document.getElementById('total');
+  const p = document.querySelector('#initial');
+  const pmt = document.querySelector('#ongoing');
+  const t = document.querySelector('#term');
+  const r = document.querySelector('#rate');
+  const n = 12;
+  const totalV = document.querySelector('#total'); //Total Value Displayed
 
   const submitValues = () => {
-    console.log((i*((1+r)/100)**t).toFixed(2));
-    // totalV.innerHTML = 'Total Investment Value:' + ' ' + '$' + (initialV*((1+rateV)/100)**termV).toFixed(2);
+
+    let pV = null;
+    let rV = null;
+    let pmtV = null;
+    let tV = null;
+
+    if(p != null && r != null && pmt != null && t != null) {
+      pV = p.value;
+      rV = r.value;
+      pmtV = pmt.value;
+      tV = t.value;
+    } else {
+      pV = 0;
+      rV = 0;
+      pmtV = 0;
+      tV = 0;
+    }
+
+      console.log(`Principle Value is ${p.value}`)
+      console.log(`Contribution Value is ${pmt.value}`)
+      console.log(`Years Value is ${t.value}`)
+      console.log(`Rate Value is ${r.value}`)
+      console.log(`Compound Value is ${n}`)
+      
+      let fv = ((pmtV*n)+pV*((1+rV)/100)**tV).toFixed(2) //Formula without contribution
+
+      console.log(`Future Value is ${fv}`);
+      
+      totalV.textContent = `Total Investment Value: $ ${fv}`;
   }
+
 
     const data = [
         {
@@ -61,12 +84,16 @@ const FutureValue = () => {
                 <div className={styles.inputContainer}>
                     <input className={styles.input} id="initial" />
                     <label htmlFor="initial">Initial Contribution</label>
+
                     <input className={styles.input} id="ongoing" />
                     <label htmlFor="recurring">Recurring Contribution</label>
+
                     <input className={styles.input} id="term" />
                     <label htmlFor="term">Investment Term</label>
+
                     <input className={styles.input} id="rate" />
                     <label htmlFor="rate">Expected Rate of Return (%)</label>
+                    
                     <button className={styles.button} onClick={submitValues} >Submit</button>
                 </div>
                 <div className={styles.chart}>
