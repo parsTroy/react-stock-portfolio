@@ -84,7 +84,7 @@ export default function PortfolioMonitor({ stocks, setStocks }) {
                                         s.profitLoss > 0 ? 'profitrow' : 'lossrow'
                                     } monitorrow`}
                                 >
-                                    {s.profitLoss ? s.profitLoss : null}
+                                   ${s.profitLoss ? s.profitLoss : null}
                                 </div>
                                 <div className="monitorrow">
                                 </div>
@@ -111,11 +111,12 @@ export default function PortfolioMonitor({ stocks, setStocks }) {
                     <div
                         className={`${
                             profitLossTotalCalculator(stocks)
+                                > 0
                                 ? 'profitrow'
                                 : 'lossrow'
                         } monitorsummaryrow`}
                     >
-                        {profitLossTotalCalculator(stocks)}
+                       ${profitLossTotalCalculator(stocks)}
                     </div>
                 </div>
                 <div className="rightshift">

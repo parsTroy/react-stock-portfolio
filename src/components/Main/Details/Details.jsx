@@ -19,7 +19,7 @@ const Details = ({ details }) => {
     }
 
   return (
-        <ul>
+        <ul className='-ml-9'>
             {Object.keys(detailsList).map((item) => {
                 return (
                     <li key={item} className={styles.data}>
