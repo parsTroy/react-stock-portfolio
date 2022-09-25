@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 25rem 35rem 35rem;
+    grid-template-columns: 30rem 35rem 35rem;
     grid-template-rows: 1fr 1fr;
     margin-top: 40px;
     background-color: var(--accent-color);
@@ -9,7 +9,7 @@
     text-align: left;
 }
 .logo {
-    width: 100px;
+    width: 150px;
     margin-left: 8rem;
 }
 
@@ -17,8 +17,7 @@
     position: relative;
     width: 800px;
     text-align: center;
-    align-content: center;
-    left: 20rem;
+    margin-left: 30rem;
     margin-bottom: 30px;
 }
 

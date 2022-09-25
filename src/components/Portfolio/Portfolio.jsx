@@ -60,6 +60,12 @@ const handleRemoveStock = async (stockId) => {
                 <h1 className={styles.title}>Portfolio</h1>
                 <div className={styles.stockContainer}>
                 </div>
+                <div className='grid grid-cols-4 text-left'>
+                    <h2>Ticker</h2>
+                    <h2>Action</h2>
+                    <h2>Quantity</h2>
+                    <h2>Price</h2>
+                </div>
                     {/* For each stock in database renders a row with info */}
                     {stocks.map((s) => {
                         return (
