@@ -1,19 +1,28 @@
 .container {
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     margin: 40px 50px 0 50px;
     padding: 50px;
     background-color: var(--accent-color);
     border-radius: 10px;
+    font-size: 16px;
 }
 
 .title {
+    text-align: center;
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .subTitle {
     font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p, ul {
+    width: 700px;
 }
