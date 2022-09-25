@@ -1,0 +1,28 @@
+.containerHeader {
+    display: flex;
+    columns: 4;
+    column-gap: 50px;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.portfolioValue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    border-radius: 5px;
+}
+.yield,
+.yieldOnCost,
+.annualIncome,
+.beta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+}

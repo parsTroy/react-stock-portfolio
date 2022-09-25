@@ -42,6 +42,7 @@ button {
     background-color: var(--a-color);
     border: none;
     font-weight: bold;
+    border-radius: 8px;
 }
 button:hover {
     background-color: var(--accent-2-color);
@@ -60,7 +61,8 @@ a:hover {
 img:hover {
     cursor: pointer;
 }
-input {
+input, 
+select {
     background-color: #121212;
     text-decoration: none;
     outline: none;

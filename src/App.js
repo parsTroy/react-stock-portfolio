@@ -4,7 +4,8 @@ import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header';
 import Dashboard from './components/Main/Dashboard';
 import StockContext from './context/StockContext';
-import Portfolio from './components/Portfolio/Portfolio.jsx';
+// import Portfolio from './components/Portfolio/Portfolio.jsx';
+import PortfolioDashboard from './components/PortfolioDashboard/PortfolioDashboard.jsx';
 import FutureValue from './components/FutureValue/FutureValue.jsx';
 import ProfilePage from './components/Profile/ProfilePage.jsx';
 import About from './components/About/About.jsx';
@@ -20,7 +21,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+        <Route path="/portfolio" element={<PortfolioDashboard />} />
         <Route path="/future-value" element={<FutureValue />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<About />} />

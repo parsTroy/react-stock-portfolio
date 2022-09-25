@@ -1,138 +1,103 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import DATABASE from "../../utils/database";
+import PortfolioForm from "../PortfolioForm/PortfolioForm";
 import styles from './Portfolio.module.css'
 
 const Portfolio = () => {
 
-    const data = [
-        {
-            ticker: 'APPL', 
-            name: 'Apple Inc.', 
-            price: 192.00, 
-            dividend : 0.4, 
-            pH : 194.00, 
-            pL : 190.00, 
-            rating : 'Buy'
-        },
-        {
-            ticker: 'META', 
-            name: 'Facebook Inc.', 
-            price: 492.00, 
-            dividend : 0.2, 
-            pH : 494.00, 
-            pL : 490.00, 
-            rating : 'Sell'
-        },
-        {
-            ticker: 'COST', 
-            name: 'Costco Wholesale Inc.', 
-            price: 592.00, 
-            dividend : 0.5, 
-            pH : 594.00, 
-            pL : 590.00, 
-            rating : 'Buy'
-        },
-    ]
+    //State of the stocks
+    const [stocks, setStocks] = useState([]);
+
+// ----------------------------------------------------------------------
+
+
+const [inputVisibility, setInputVisibility] = useState(false);
+
+useEffect(() => {
+    //GET request to the database to fetch the stock which are already in our portfolio
+    const fetchData = async () => {
+        try {
+            const response = await fetch(`https://${DATABASE}.json`);
+            const data = await response.json();
+
+            //Validates that the database is not empty
+            if (data) {
+                //If not empty modifies the data with fetched results and updates state
+                const dataModified = Object.keys(data).map((key) => ({
+                    id: key,
+                    ticker: data[key]['ticker'],
+                    position: data[key]['position'],
+                    quantity: data[key]['quantity'],
+                    price: data[key]['price'],
+                    dividend: data[key]['dividend'],
+                }));
+                setStocks(dataModified);
+            }
+        } catch (error) {
+            /*The option how to handle the error is totally up to you. 
+            Ideally, you can send notification to the user */
+            // console.log(error);
+        }
+    };
+
+    fetchData();
+}, [setStocks]);
+
+//Function that removes the stock from portfolio
+const handleRemoveStock = async (stockId) => {
+    try {
+        //DELETE request to the database to delete specific stock by id
+        await fetch(`https://${DATABASE}/${stockId}.json`, {
+            method: 'DELETE',
+            'Content-Type': 'application/json',
+        });
+
+        //Updates state by removing this stock
+        setStocks((stocks) => stocks.filter((s) => s.id !== stockId));
+    } catch (error) {
+        /*The option how to handle the error is totally up to you. 
+        Ideally, you can send notification to the user */
+        // console.log(error);
+    }
+};
 
   return (
         <div className={styles.container}>
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Portfolio</h1>
-                <h2 className={styles.subTitle}>Stock Portfolio Tracking Simplified</h2>
                 <div className={styles.stockContainer}>
-                    <div className={styles.stockDiv} key={data}>
-                        <table className={styles.table}>
-                            {/* <tr>
-                                <th className={styles.head}>Rating</th>
-                            </tr> */}
-                            <div className={styles.tables}>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Ticker</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.ticker}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Company Name</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.name}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Price</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.price}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Dividend</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.dividend}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Daily High</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.pH}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Daily Low</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.pL}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                                <div className={styles.tableColumn}>
-                                    <th className={styles.head}>Rating</th>
-                                    {data.map(stock => {
-                                        return (
-                                            <>
-                                                <tr>
-                                                    {stock.rating}
-                                                </tr>
-                                            </>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </table>
-                    </div>
                 </div>
+                    {/* For each stock in database renders a row with info */}
+                    {stocks.map((s) => {
+                        return (
+                            <div className={styles.portfoliorowwrapper} key={s.id}>
+                                <div className={styles.portfoliorow}>{s.ticker}</div>
+                                <div className={styles.portfoliorow}>{s.position}</div>
+                                <div className={styles.portfoliorow}>{s.quantity}</div>
+                                <div className={styles.portfoliorow}>{s.price}</div>
+                                <div className={styles.portfoliorow}>{s.dividend}</div>
+                                <button
+                                    className={styles.removestockbutton}
+                                    onClick={() => handleRemoveStock(s.id)}
+                                >
+                                    <span>-</span>
+                                </button>
+                            </div>
+                        );
+                    })}
+                    {/* Form to add new stock to the portfolio */}
+                    {inputVisibility ? (
+                        <PortfolioForm
+                            setStocks={setStocks}
+                            setInputVisibility={setInputVisibility}
+                        />
+                    ) : null}
+                    <button
+                        className={styles.addmorebutton}
+                        onClick={() => setInputVisibility(!inputVisibility)}
+                    >
+                        <span>Add New Stock</span>
+                    </button>
             </div>
         </div>
     );

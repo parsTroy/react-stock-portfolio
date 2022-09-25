@@ -1,0 +1,112 @@
+.container {
+    text-align: center;
+    margin: 40px 50px 0 50px;
+    padding: 50px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.headingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    columns: 4;
+    width: 90%;
+}
+
+.portfolioValue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 55px;
+    border-radius: 5px;
+}
+.yield,
+.yieldOnCost,
+.annualIncome,
+.beta {
+    width: 260px;
+    height: 50px;
+    border: 1px solid white;
+}
+
+
+/* Adds Scrolling to the portfolio */
+/* .portfolio {
+    display: flex;
+    columns: 10;
+    justify-content: center;
+    margin: 50px;
+    height: 550px;
+    overflow-y: auto;
+} */
+
+.ticker,
+.shares,
+.price,
+.change,
+.averageCost,
+.profitLoss,
+.dividendYied,
+.yOC,
+.aI,
+.dividendSafey {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.button {
+    width: 40px;
+    height: 20px;
+    margin: 2.5px;
+}
+
+.listItem {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    border-bottom: 1px #2d2d2d;
+}
+
+.portfolioconfiguration,
+.portfoliomonitor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+.portfoliobuttoncontinuewrapper,
+.portfoliobuttonbackwrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ 
+.portfoliobuttoncontinue,
+.portfoliobuttonback {
+    margin-top: 10px;
+    border: none;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+ 
+.portfoliobuttoncontinue:hover,
+.portfoliobuttonback:hover {
+    background-color: rgba(187, 134, 252, .80);
+}
+
+.portfoliobuttoncontinue:active,
+.portfoliobuttonback:active {
+    background-color: rgba(187, 134, 252, .50);
+}

@@ -1,0 +1,70 @@
+.monitorpage {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    padding-left: 130px;
+}
+
+.monitormainrowwrapper,
+.monitorrowwrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.monitorsummaryrowwrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.monitormainrow,
+.monitorrow {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.monitorsummaryrow {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.profitrow {
+    color: #04A777;
+}
+
+.lossrow {
+    color: #FF6B6C;
+}
+
+.monitorfetchprices {
+    margin-top: 40px;
+    border: none;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.monitorfetchprices:hover {
+    cursor: pointer;
+}
+
+.rightshift {
+    margin-right: 130px;
+}

@@ -1,0 +1,40 @@
+.addmorewrapper {
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addmoreform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addmorerow {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.addmorerow input,
+select {
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline: none;
+}
+
+.addnewstockbutton {
+    margin-left: 10px;
+}
