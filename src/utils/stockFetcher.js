@@ -5,7 +5,7 @@ import { TOKEN, DIVIDEND_TOKEN } from './stockAPI';
 
 
 //Function which fetches the current prices and updates our state with current prices and profit/loss
-const stockFetcher = (stocks, setStocks, profitLossCalculator, yieldCalculator) => {
+const stockFetcher = (stocks, setStocks, profitLossCalculator) => {
     stocks.forEach(async (s) => {
         try {
             const stockName = s.ticker.replace('', '');
@@ -13,8 +13,6 @@ const stockFetcher = (stocks, setStocks, profitLossCalculator, yieldCalculator) 
                 // `${STOCK_API}/quote?symbol=${stockName}&token=${TOKEN}`
                 `${STOCK_API_DIVIDEND}${stockName}${DIVIDEND_TOKEN}`
             );
-
-            // console.log(response)
 
             const data = await response.json();
 

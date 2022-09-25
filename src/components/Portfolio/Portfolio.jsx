@@ -3,13 +3,7 @@ import DATABASE from "../../utils/database";
 import PortfolioForm from "../PortfolioForm/PortfolioForm";
 import styles from './Portfolio.module.css'
 
-const Portfolio = () => {
-
-    //State of the stocks
-    const [stocks, setStocks] = useState([]);
-
-// ----------------------------------------------------------------------
-
+const Portfolio = ({ stocks, setStocks }) => {
 
 const [inputVisibility, setInputVisibility] = useState(false);
 
@@ -29,7 +23,6 @@ useEffect(() => {
                     position: data[key]['position'],
                     quantity: data[key]['quantity'],
                     price: data[key]['price'],
-                    dividend: data[key]['dividend'],
                 }));
                 setStocks(dataModified);
             }
@@ -75,7 +68,6 @@ const handleRemoveStock = async (stockId) => {
                                 <div className={styles.portfoliorow}>{s.position}</div>
                                 <div className={styles.portfoliorow}>{s.quantity}</div>
                                 <div className={styles.portfoliorow}>{s.price}</div>
-                                <div className={styles.portfoliorow}>{s.dividend}</div>
                                 <button
                                     className={styles.removestockbutton}
                                     onClick={() => handleRemoveStock(s.id)}

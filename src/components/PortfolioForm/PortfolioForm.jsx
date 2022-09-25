@@ -71,7 +71,9 @@ export default function PortfolioForm({ setStocks, setInputVisibility }) {
         <div className={style.addmorewrapper}>
             <form className={style.addmoreform}>
                 <div className={style.addmorerow}>
+                    <label for='ticker'>Ticker</label>
                     <input
+                        id='ticker'
                         type='text'
                         name='ticker'
                         value={formValues.ticker}
@@ -80,6 +82,7 @@ export default function PortfolioForm({ setStocks, setInputVisibility }) {
                     />
                 </div>
                 <div className={style.addmorerow}>
+                    <div>Action</div>
                     <select
                         name='position'
                         onChange={handleChange}
@@ -90,7 +93,9 @@ export default function PortfolioForm({ setStocks, setInputVisibility }) {
                     </select>
                 </div>
                 <div className={style.addmorerow}>
+                    <label for='quantity'>Quantity</label>
                     <input
+                        id='quantity'
                         type='number'
                         name='quantity'
                         min='0'
@@ -99,7 +104,9 @@ export default function PortfolioForm({ setStocks, setInputVisibility }) {
                     />
                 </div>
                 <div className={style.addmorerow}>
+                    <label for='price'>Price</label>
                     <input
+                        id='price'
                         type='number'
                         name='price'
                         min='0'

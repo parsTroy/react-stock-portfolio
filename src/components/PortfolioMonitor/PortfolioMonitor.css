@@ -18,6 +18,10 @@
     width: 100%;
 }
 
+.monitormainrow {
+    font-weight: bold;
+}
+
 .monitormainrow,
 .monitorrow {
     width: 150px;
@@ -25,7 +29,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
     font-size: 20px;
 }
 

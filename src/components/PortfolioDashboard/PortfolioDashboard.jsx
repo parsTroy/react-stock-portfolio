@@ -18,7 +18,7 @@ const Dashboard = () => {
   return (
     <div className={style.container}>
       <div className={style.headingContainer}>
-        <PortfolioStats />
+        <PortfolioStats stocks={stocks} setStocks={setStocks} />
       </div>
       <div className={style.portfolio}>
             <div className={style.ticker}>

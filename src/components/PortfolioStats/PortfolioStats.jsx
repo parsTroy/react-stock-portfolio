@@ -1,6 +1,6 @@
 import style from './PortfolioStats.module.css';
 
-const PortfolioStats = () => {
+const PortfolioStats = ({ stocks, setStocks }) => {
 
     return (
         <div className={style.containerHeader}>

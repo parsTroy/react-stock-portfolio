@@ -38,17 +38,17 @@ export default function PortfolioMonitor({ stocks, setStocks }) {
     };
 
     // Calculates the yield or loss for the whole portfolio
-    // const yieldTotalCalculator = (stocks) => {
-    //     let yieldTotal = 0;
+    const yieldTotalCalculator = (stocks) => {
+        let yieldTotal = 0;
 
-    //     stocks.forEach((s) => {
-    //         if (!isNaN(Number(s.yield))) {
-    //             yieldTotal += Number(s.lastDiv[0]);
-    //         }
-    //     });
+        stocks.forEach((s) => {
+            if (!isNaN(Number(s.yield))) {
+                yieldTotal += Number(s.lastDiv[0]);
+            }
+        });
 
-    //     return yieldTotal.toFixed(2);
-    // };
+        return yieldTotal.toFixed(2);
+    };
 
     const fetchPrices = () => {
         //Fetches prices and updates the state with current prices and profit or loss for the position

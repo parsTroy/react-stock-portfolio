@@ -21,8 +21,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 260px;
-    height: 50px;
-    border: 1px solid white;
+    width: 290px;
+    height: 60px;
+    border: 2px solid #BB86FC;
+    color: #9EEFE5;
     border-radius: 10px;
+    font-size: 20px;
 }
