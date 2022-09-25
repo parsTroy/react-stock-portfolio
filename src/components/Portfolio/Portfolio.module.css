@@ -17,3 +17,27 @@
 .subTitle {
     font-size: 25px;
 }
+
+.stockDiv {
+    display: flex;
+    margin-top: 20px;
+}
+
+.head {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.stock {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tables {
+    display: flex;
+}
+
+.tableColumn {
+    margin-right: 10px;
+}
+/* --------------------------------------------------------------- */
