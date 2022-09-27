@@ -26,6 +26,8 @@ export const fetchData = () => {
       })
 }
 
+// Control Writing Ability with Firebase Permissions
+
 const DATABASE = 'react-dividend-tracker-default-rtdb.firebaseio.com/stocks';
 
 export default DATABASE;
