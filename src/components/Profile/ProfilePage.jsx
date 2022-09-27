@@ -6,7 +6,14 @@ const Profile = () => {
     <div className={styles.container}>
       <div className={styles.titleContainer}>
           <h1 className={styles.title}>Profile</h1>
-          <h2 className={styles.subTitle}>Stock Portfolio Tracking Simplified</h2>
+          <div className="grid grid-cols-2">
+            <div className="mr-10">
+              Left Side
+            </div>
+            <div className="ml-10">
+              Right Side
+            </div>
+          </div>
       </div>
     </div>
   );
