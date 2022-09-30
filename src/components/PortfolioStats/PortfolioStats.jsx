@@ -24,7 +24,7 @@ const PortfolioStats = ({ stocks, setStocks }) => {
     };
 
     const valueTotalCalculator = (stocks) => {
-        let valueTotal = 100;
+        let valueTotal = 0;
 
         stocks.forEach((s) => {
             if (!isNaN(Number(s.currentPrice))) {
@@ -34,6 +34,18 @@ const PortfolioStats = ({ stocks, setStocks }) => {
 
         return valueTotal.toFixed(2);
     };
+
+    // const yieldOnCostTotalCalculator = (stocks) => {
+    //     let valueTotal = 100;
+
+    //     stocks.forEach((s) => {
+    //         if (!isNaN(Number(s.currentPrice))) {
+    //             valueTotal += (Number(s.currentPrice)*s.quantity)
+    //         }
+    //     });
+
+    //     return valueTotal.toFixed(2);
+    // };
 
     return (
         <div className={style.containerHeader}>
