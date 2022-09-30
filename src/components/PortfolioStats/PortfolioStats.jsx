@@ -11,12 +11,15 @@ const PortfolioStats = ({ stocks, setStocks }) => {
 
     const yieldTotalCalculator = (stocks) => {
         let yieldTotal = 0;
-
-        console.log(stocks);
+        let stockTotal = 0;
+        let weight = 0
 
         stocks.forEach((s) => {
-            if (!isNaN(Number(s.yield))) {
-                yieldTotal += Number(s.lastDiv[0]);
+            if (!isNaN(Number(s.lastDiv))) {
+                stockTotal += Number(s.quantity);
+                weight = Number(s.quantity)/stockTotal;
+                console.log(weight);
+                yieldTotal += Number(s.lastDiv);
             }
         });
 
@@ -35,24 +38,36 @@ const PortfolioStats = ({ stocks, setStocks }) => {
         return valueTotal.toFixed(2);
     };
 
-    // const yieldOnCostTotalCalculator = (stocks) => {
-    //     let valueTotal = 100;
+    const yieldOnCostTotalCalculator = (stocks) => {
+        let yieldOnCostTotal = 0;
 
-    //     stocks.forEach((s) => {
-    //         if (!isNaN(Number(s.currentPrice))) {
-    //             valueTotal += (Number(s.currentPrice)*s.quantity)
-    //         }
-    //     });
+        stocks.forEach((s) => {
+            if (!isNaN(Number(s.price))) {
+                yieldOnCostTotal += 1007
+            }
+        });
 
-    //     return valueTotal.toFixed(2);
-    // };
+        return yieldOnCostTotal.toFixed(2);
+    };
+
+    const annualIncomeCalculator = (stocks) => {
+        let annualIncomeTotal = 0;
+
+        stocks.forEach((s) => {
+            if (!isNaN(Number(s.price))) {
+                annualIncomeTotal += (s.currentPrice*s.lastDiv)*s.quantity;
+            }
+        });
+
+        return annualIncomeTotal.toFixed(2);
+    };
 
     return (
         <div className={style.containerHeader}>
             <div className={style.portfolioValue}>${valueTotalCalculator(stocks)}</div>
-            <div className={style.yield}>Portfolio Yield: ${yieldTotalCalculator(stocks)}</div>
-            <div className={style.yieldOnCost}>Yield on Cost: {`11.98%`}</div>
-            <div className={style.annualIncome}>Annual Income: {`$2,400.12`}</div>
+            <div className={style.yield}>Portfolio Yield: {yieldTotalCalculator(stocks)}%</div>
+            <div className={style.yieldOnCost}>Yield on Cost: {yieldOnCostTotalCalculator(stocks)}%</div>
+            <div className={style.annualIncome}>Annual Income: ${annualIncomeCalculator(stocks)}</div>
             <div className={style.beta}>Portfolio Beta: {`0.72`}</div>
         </div>
     );
