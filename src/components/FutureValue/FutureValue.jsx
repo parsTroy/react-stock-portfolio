@@ -13,12 +13,12 @@ const FutureValue = () => {
 
   const submitValues = () => {
 
-    let pV = null;
-    let rV = null;
-    let pmtV = null;
-    let tV = null;
+    let pV = 0;
+    let rV = 0;
+    let pmtV = 0;
+    let tV = 0;
 
-    if(p != null && r != null && pmt != null && t != null) {
+    if(p !== 0 && r !== 0 && pmt !== 0 && t !== 0) {
       pV = p.value;
       rV = r.value;
       pmtV = pmt.value;
@@ -42,7 +42,6 @@ const FutureValue = () => {
       
       totalV.textContent = `Total Investment Value: $ ${fv}`;
   }
-
 
     const data = [
         {
