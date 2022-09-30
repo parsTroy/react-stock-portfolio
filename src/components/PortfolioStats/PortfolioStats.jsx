@@ -38,12 +38,19 @@ const PortfolioStats = ({ stocks, setStocks }) => {
         return valueTotal.toFixed(2);
     };
 
+
+    //Un finished Needs more calculation (adding price calculation into weighted average)
     const yieldOnCostTotalCalculator = (stocks) => {
         let yieldOnCostTotal = 0;
+        let stockTotal = 0;
+        let weight = 0
 
         stocks.forEach((s) => {
-            if (!isNaN(Number(s.price))) {
-                yieldOnCostTotal += 1007
+            if (!isNaN(Number(s.lastDiv))) {
+                stockTotal += Number(s.quantity);
+                weight = Number(s.quantity)/stockTotal;
+
+                yieldOnCostTotal += (Number(s.lastDiv)*weight);
             }
         });
 
@@ -68,7 +75,7 @@ const PortfolioStats = ({ stocks, setStocks }) => {
             <div className={style.yield}>Portfolio Yield: {yieldTotalCalculator(stocks)}%</div>
             <div className={style.yieldOnCost}>Yield on Cost: {yieldOnCostTotalCalculator(stocks)}%</div>
             <div className={style.annualIncome}>Annual Income: ${annualIncomeCalculator(stocks)}</div>
-            <div className={style.beta}>Portfolio Beta: {`0.72`}</div>
+            {/* <div className={style.beta}>Portfolio Beta: {`0.72`}</div> NEED API END-POINT FOR BETA */}
         </div>
     );
 };
