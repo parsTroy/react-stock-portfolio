@@ -10,7 +10,7 @@ const FutureValue = () => {
   const r = document.querySelector('#rate');
   const n = 12;
   const totalV = document.querySelector('#total'); //Total Value Displayed
-
+  
   const submitValues = () => {
 
     let pV = 0;
@@ -18,16 +18,11 @@ const FutureValue = () => {
     let pmtV = 0;
     let tV = 0;
 
-    if(p !== 0 && r !== 0 && pmt !== 0 && t !== 0) {
-      pV = p.value;
-      rV = r.value;
-      pmtV = pmt.value;
-      tV = t.value;
-    } else {
-      pV = 0;
-      rV = 0;
-      pmtV = 0;
-      tV = 0;
+    if (p !== 0 && r !== 0 && pmt !== 0 && t !== 0) {
+      pV = p?.value;
+      rV = r?.value;
+      pmtV = pmt?.value;
+      tV = t?.value;
     }
 
       console.log(`Principle Value is ${p.value}`)
