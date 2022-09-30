@@ -18,8 +18,8 @@ const PortfolioStats = ({ stocks, setStocks }) => {
             if (!isNaN(Number(s.lastDiv))) {
                 stockTotal += Number(s.quantity);
                 weight = Number(s.quantity)/stockTotal;
-                console.log(weight);
-                yieldTotal += Number(s.lastDiv);
+
+                yieldTotal += (Number(s.lastDiv)*weight);
             }
         });
 
