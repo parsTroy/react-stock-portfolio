@@ -39,8 +39,8 @@ const Profile = () => {
                   <input className="mb-2" type="text" />
                   <div className="mb-1"></div>
                   <select className="w-[210px] h-[44px]" id="currency">
-                    <option value="CAD">CAD</option>
                     <option value="USD">USD</option>
+                    <option value="CAD">CAD</option>
                   </select>
                 </div>
               </div>
