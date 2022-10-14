@@ -20,7 +20,7 @@ function App() {
     <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
       <Header />
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/react-stock-portfolio" element={<Dashboard />} />
         {/* <Route path="/portfolio" element={<Portfolio />} /> */}
         <Route path="/portfolio" element={<PortfolioDashboard />} />
         <Route path="/future-value" element={<FutureValue />} />

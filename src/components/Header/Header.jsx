@@ -8,17 +8,17 @@ const Header = () => {
   return (
       <div className={styles.container}>
         <div>
-            <a href="/">
+            <a href="//react-stock-portfolio">
               <img className={styles.logo} src={Logo} alt="logo" />
             </a>
         </div>
         <div className={styles.title}>
-          <a href="/">
+          <a href="/react-stock-portfolio">
             <h1 className={styles.title}>Investation</h1>
           </a>
         </div>
         <div className={styles.navigation}>
-            <a href="/">
+            <a href="/react-stock-portfolio">
               <button className={styles.navBtn}>Home</button>
             </a>
             <a href="/portfolio">

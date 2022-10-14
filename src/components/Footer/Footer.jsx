@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div>
-        <a href="/">
+        <a href="/react-stock-portfolio">
           <img className={styles.logo} src={Logo} alt="logo" />
         </a>
       </div>
