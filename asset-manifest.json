@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-stock-portfolio/static/css/main.66d5ee28.css",
-    "main.js": "/react-stock-portfolio/static/js/main.8d4be9cf.js",
+    "main.js": "/react-stock-portfolio/static/js/main.e22c097b.js",
     "static/media/logo-img.png": "/react-stock-portfolio/static/media/logo-img.74dce89fd80d8b3dc20b.png",
     "static/media/logo.png": "/react-stock-portfolio/static/media/logo.684657bb33865ae1c32e.png",
     "index.html": "/react-stock-portfolio/index.html",
     "main.66d5ee28.css.map": "/react-stock-portfolio/static/css/main.66d5ee28.css.map",
-    "main.8d4be9cf.js.map": "/react-stock-portfolio/static/js/main.8d4be9cf.js.map"
+    "main.e22c097b.js.map": "/react-stock-portfolio/static/js/main.e22c097b.js.map"
   },
   "entrypoints": [
     "static/css/main.66d5ee28.css",
-    "static/js/main.8d4be9cf.js"
+    "static/js/main.e22c097b.js"
   ]
 }
