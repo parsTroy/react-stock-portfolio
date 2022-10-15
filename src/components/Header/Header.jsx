@@ -3,35 +3,36 @@ import styles from './Header.module.css';
 import Logo from '../../assets/logo-img.png';
 import Portfolio from "../Portfolio/Portfolio";
 import FutureValue from "../FutureValue/FutureValue";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
       <div className={styles.container}>
         <div>
-            <a href="//react-stock-portfolio">
+            <Link to="//react-stock-portfolio">
               <img className={styles.logo} src={Logo} alt="logo" />
-            </a>
+            </Link>
         </div>
         <div className={styles.title}>
-          <a href="/react-stock-portfolio">
+          <Link to="/react-stock-portfolio">
             <h1 className={styles.title}>Investation</h1>
-          </a>
+          </Link>
         </div>
         <div className={styles.navigation}>
-            <a href="/react-stock-portfolio">
+            <Link to="/react-stock-portfolio">
               <button className={styles.navBtn}>Home</button>
-            </a>
-            <a href="/portfolio">
+            </Link>
+            <Link to="/portfolio">
               <button className={styles.navBtn}>Portfolio</button>
-            </a>
-            <a href="/future-value">
+            </Link>
+            <Link to="/future-value">
               <button className={styles.navBtn}>Future Value</button>
-            </a>
+            </Link>
         </div>
         <div>
-          <a href="/profile">
+          <Link to="/profile">
             <button className={styles.profileBtn}>i</button>
-          </a>
+          </Link>
         </div>
       </div>
   );

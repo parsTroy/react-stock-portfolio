@@ -1,30 +1,31 @@
 import React from "react";
 import styles from './Footer.module.css';
 import Logo from '../../assets/logo.png';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className={styles.container}>
       <div>
-        <a href="/react-stock-portfolio">
+        <Link to="/react-stock-portfolio">
           <img className={styles.logo} src={Logo} alt="logo" />
-        </a>
+        </Link>
       </div>
       <div className={styles.links}>
-        <a href="/future-value">
+        <Link to="/future-value">
           <p>Future Value Calculator</p>
-        </a>
-        <a href="/about">
+        </Link>
+        <Link to="/about">
           <p>About Us</p>
-        </a>
+        </Link>
       </div>
       <div>
-        <a href="/terms-of-service">
+        <Link to="/terms-of-service">
           <p>Terms of Service</p>
-        </a>
-        <a href="/privacy-policy">
+        </Link>
+        <Link to="/privacy-policy">
           <p>Privacy Policy</p>
-        </a>
+        </Link>
       </div>
       <div className={styles.legal}>
         <p>
