@@ -4,6 +4,8 @@ import styles from './FutureValue.module.css';
 
 const FutureValue = () => {
 
+// Need to complete calculations
+
   const p = document.querySelector('#initial');
   const pmt = document.querySelector('#ongoing');
   const t = document.querySelector('#term');
